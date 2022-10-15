@@ -16,8 +16,9 @@ public class ExampleResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        myReactiveMessagingApplication.sendTime(Instant.now());
-        System.out.println("serving hello request: " + Instant.now());
-        return "Hello RESTEasy: " + Instant.now();
+        Instant now = Instant.now();
+        myReactiveMessagingApplication.sendTime(now);
+        System.out.println("serving hello request: " + now);
+        return "Hello RESTEasy: " + now;
     }
 }

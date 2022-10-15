@@ -26,6 +26,10 @@ mvn -f consumer quarkus:dev
 
 ## Creating messages
 
-You can send _GET_ requests to http://localhost:8080/hello
+You can send _GET_ requests
+
+```http request
+GET http://localhost:8080/hello
+```
 
 The _producer_ will then send a message and the _consumer_ read this message and print it to the console.
