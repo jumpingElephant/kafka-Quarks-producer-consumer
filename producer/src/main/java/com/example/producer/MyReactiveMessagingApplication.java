@@ -1,4 +1,4 @@
-package com.example;
+package com.example.producer;
 
 import org.eclipse.microprofile.reactive.messaging.Channel;
 import org.eclipse.microprofile.reactive.messaging.Emitter;

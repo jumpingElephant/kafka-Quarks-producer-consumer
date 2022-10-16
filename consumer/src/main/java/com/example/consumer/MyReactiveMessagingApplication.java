@@ -1,4 +1,4 @@
-package com.example;
+package com.example.consumer;
 
 import org.eclipse.microprofile.reactive.messaging.Incoming;
 

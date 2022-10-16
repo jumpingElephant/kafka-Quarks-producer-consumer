@@ -1,4 +1,4 @@
-package com.example;
+package com.example.producer;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;

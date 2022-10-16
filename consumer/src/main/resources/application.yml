@@ -1,0 +1,22 @@
+quarkus:
+  http:
+    port: 8081
+"%dev":
+  kafka:
+    bootstrap:
+      servers: kafka:9092
+  mp:
+    messaging:
+      incoming:
+        time-in:
+          topic: time
+          auto:
+            offset:
+              reset: latest
+            group:
+              id: ${quarkus.uuid}
+"%test":
+  quarkus:
+    kafka:
+      devservices:
+        enabled: false

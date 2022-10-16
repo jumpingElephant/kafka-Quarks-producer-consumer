@@ -1,0 +1,20 @@
+"%dev":
+  kafka:
+    bootstrap:
+      servers: kafka:9092
+  mp:
+    messaging:
+      outgoing:
+        time-out:
+          topic: time
+"%test":
+  quarkus:
+    kafka:
+      devservices:
+        enabled: false
+  mp:
+    messaging:
+      outgoing:
+        time-out:
+          topic: time
+          connector: smallrye-kafka
