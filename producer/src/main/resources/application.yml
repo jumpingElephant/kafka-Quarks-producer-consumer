@@ -1,7 +1,7 @@
 "%dev":
-  #  kafka:
-  #    bootstrap:
-  #      servers: kafka:9092
+  kafka:
+    bootstrap:
+      servers: kafka:9092
   mp:
     messaging:
       outgoing:

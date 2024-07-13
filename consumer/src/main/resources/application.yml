@@ -2,9 +2,9 @@ quarkus:
   http:
     port: 8081
 "%dev":
-  #  kafka:
-  #    bootstrap:
-  #      servers: kafka:9092
+  kafka:
+    bootstrap:
+      servers: kafka:9092
   mp:
     messaging:
       incoming:

@@ -1,0 +1,15 @@
+# https://github.com/tchiotludo/akhq/blob/cf173a61e241ff6dd6c9bd14819c7487e216fdf6/application.example.yml
+akhq:
+  connections:
+    local:
+      properties:
+        "bootstrap.servers": "kafka:9092"
+      ui-options:
+        topic:
+          #          default-view: ALL  # default list view (ALL, HIDE_INTERNAL, HIDE_INTERNAL_STREAM, HIDE_STREAM). Overrides default
+          #          skip-consumer-groups: false # Skip loading consumer group information when showing topics. Overrides default
+          #          skip-last-record: true  # Skip loading last record date information when showing topics.  Overrides default
+          show-all-consumer-groups: true # Expand list of consumer groups instead of showing one. Overrides default.
+        topic-data:
+          sort: NEWEST # default sort order (OLDEST, NEWEST) (default: OLDEST).  Overrides default
+          date-time-format: RELATIVE # format of message timestamps (RELATIVE, ISO) (default: RELATIVE)
