@@ -24,6 +24,8 @@ mvn -f consumer quarkus:dev
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8081/q/dev/.
 
+> Inspect messaging with [AKHQ](https://akhq.io/): http://localhost:8084/ui/local/topic
+
 ## Creating messages
 
 You can send _GET_ requests

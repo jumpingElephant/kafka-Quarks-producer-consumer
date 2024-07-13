@@ -13,11 +13,17 @@ quarkus:
       incoming:
         time-in:
           topic: time
+          value:
+            deserializer: com.example.consumer.CustomDeserializer
+          key:
+            deserializer: org.apache.kafka.common.serialization.StringDeserializer
           auto:
             offset:
               reset: latest
             group:
               id: ${quarkus.uuid}
+          batch:
+            max-size: 10
   quarkus:
     datasource:
       password: example
