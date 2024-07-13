@@ -1,6 +1,9 @@
 quarkus:
   http:
     port: 8081
+  datasource:
+    db-kind: postgresql
+    username: postgres
 "%dev":
   kafka:
     bootstrap:
@@ -15,6 +18,14 @@ quarkus:
               reset: latest
             group:
               id: ${quarkus.uuid}
+  quarkus:
+    datasource:
+      password: example
+      jdbc:
+        url: jdbc:postgresql://localhost:5432/
+    hibernate-orm:
+      database:
+        generation: drop-and-create
 "%test":
   quarkus:
     kafka:
