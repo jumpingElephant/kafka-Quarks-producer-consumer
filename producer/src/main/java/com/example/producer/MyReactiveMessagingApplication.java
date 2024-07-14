@@ -13,6 +13,7 @@ import org.eclipse.microprofile.reactive.messaging.Metadata;
 import java.nio.charset.StandardCharsets;
 import java.time.Instant;
 import java.util.UUID;
+import java.util.stream.IntStream;
 
 @ApplicationScoped
 public class MyReactiveMessagingApplication {
@@ -34,10 +35,10 @@ public class MyReactiveMessagingApplication {
                         .withKey(UUID.randomUUID().toString())
                         .withHeaders(new RecordHeaders().add("my-header", "value".getBytes(StandardCharsets.UTF_8)))
                         .build()));
-        timeEmitter.send(message);
+        IntStream.range(0, 24).forEach(i -> timeEmitter.send(message));
     }
 
-    @Scheduled(every = "5s", delayed = "3s")
+    @Scheduled(every = "1s", delayed = "3s")
     public void scheduledMethod() {
         final var currentTime = Instant.now();
         System.out.println("scheduled time: " + currentTime);

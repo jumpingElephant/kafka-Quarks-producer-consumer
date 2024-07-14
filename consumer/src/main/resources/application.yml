@@ -14,7 +14,7 @@ quarkus:
         time-in:
           topic: time
           value:
-            deserializer: com.example.consumer.CustomDeserializer
+            deserializer: org.apache.kafka.common.serialization.StringDeserializer
           key:
             deserializer: org.apache.kafka.common.serialization.StringDeserializer
           auto:
@@ -23,7 +23,7 @@ quarkus:
             group:
               id: ${quarkus.uuid}
           batch:
-            max-size: 10
+            max-size: 32
   quarkus:
     datasource:
       password: example
