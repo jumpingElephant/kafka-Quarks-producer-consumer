@@ -57,3 +57,15 @@ docker run -it --network=kafka_default edenhill/kcat:1.7.1 -b kafka:9092 \
 docker run -it --network=kafka_default -v $PWD:/opt/var/ edenhill/kcat:1.7.1 -b kafka:9092 \
   -P -t time -K: -l /opt/var/data.txt
 ```
+
+## Inspect _Eclipse Store_
+
+See also [Eclipse Store - Client GUI](https://docs.eclipsestore.io/manual/storage/rest-interface/client-gui.html)
+
+```shell
+mvn dependency:get -Dartifact=org.eclipse.store:storage-restclient-app-standalone-assembly:1.3.2:jar:standalone -Dtransitive=false -Dclassifier=standalone
+```
+
+```shell
+java -jar ~/.m2/repository/org/eclipse/store/storage-restclient-app-standalone-assembly/1.3.2/storage-restclient-app-standalone-assembly-1.3.2-standalone.jar --server.port=8888
+```
